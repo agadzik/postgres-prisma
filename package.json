@@ -14,11 +14,15 @@
     "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
   },
   "dependencies": {
+    "@opentelemetry/api-logs": ">=0.46.0 && <1.0.0",
+    "@opentelemetry/instrumentation": ">=0.46.0 && <1.0.0",
+    "@opentelemetry/sdk-logs": ">=0.46.0 && <1.0.0",
     "@prisma/client": "^5.4.1",
     "@types/ms": "^0.7.32",
     "@types/node": "20.8.3",
     "@types/react": "18.2.25",
     "@types/react-dom": "18.2.11",
+    "@vercel/otel": "^1.11.0",
     "autoprefixer": "10.4.16",
     "eslint": "8.51.0",
     "eslint-config-next": "13.5.4",
@@ -31,5 +35,6 @@
     "tailwindcss": "3.3.3",
     "ts-node": "^10.9.1",
     "typescript": "5.2.2"
-  }
+  },
+  "packageManager": "pnpm@10.3.0+sha512.ee592eda8815a8a293c206bb0917c4bb0ff274c50def7cbc17be05ec641fc2d1b02490ce660061356bd0d126a4d7eb2ec8830e6959fb8a447571c631d5a2442d"
 }
