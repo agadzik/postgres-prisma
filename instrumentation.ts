@@ -4,6 +4,8 @@ import { PrismaInstrumentation } from '@prisma/instrumentation'
 export function register() {
   registerOTel({
     serviceName: 'postgres-prisma',
-    instrumentations: [new PrismaInstrumentation()],
+    instrumentations: [new PrismaInstrumentation({
+      middleware: true,
+    })],
   })
 }
