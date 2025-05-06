@@ -1,5 +1,9 @@
 import { registerOTel } from '@vercel/otel'
+import { PrismaInstrumentation } from '@prisma/instrumentation'
  
 export function register() {
-  registerOTel('posygres-prisma')
+  registerOTel({
+    serviceName: 'postgres-prisma',
+    instrumentations: [new PrismaInstrumentation()],
+  })
 }
